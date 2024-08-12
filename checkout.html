@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Fashion Brand</title>
+    <style>
+        /* General Styles (Inherited from the previous file) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search-bar {
+    margin-left: auto;
+    padding: 0.5em;
+    background-color: #444;
+    border-radius: 5px;
+}
+
+.search-bar input {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Main Section */
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkout h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+
+.checkout form {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.shipping-info, .payment-info, .order-summary {
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.shipping-info h3, .payment-info h3, .order-summary h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.shipping-info label, .payment-info label {
+    display: block;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+}
+
+.shipping-info input, .payment-info input {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.order-summary p {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.order-summary .btn {
+    display: block;
+    width: 100%;
+    padding: 1em;
+    background-color: #ff6f61;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    margin-top: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer (Same as in the previous file) */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.footer-info, .social-media, .newsletter-signup {
+    margin-bottom: 1em;
+}
+
+.footer-info p, .social-media a, .newsletter-signup h3 {
+    margin: 0.5em 0;
+}
+
+.social-media a {
+    margin: 0 0.5em;
+    display: inline-block;
+}
+
+.social-media img {
+    width: 30px;
+    height: 30px;
+}
+
+.newsletter-signup input {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1em;
+    width: 250px;
+}
+
+.newsletter-signup button {
+    padding: 0.5em 1em;
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1em;
+    }
+    
+    .checkout form {
+        gap: 1em;
+    }
+    
+    .shipping-info, .payment-info, .order-summary {
+        padding: 1em;
+    }
+
+    .order-summary .btn {
+        padding: 0.8em;
+        font-size: 1em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Same header as in index.html -->
+    </header>
+    
+    <main>
+        <section class="checkout">
+            <h2>Checkout</h2>
+            <form>
+                <div class="shipping-info">
+                    <h3>Shipping Information</h3>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                
+                <div class="payment-info">
+                    <h3>Payment Information</h3>
+                    <label for="card-number">Card Number:</label>
+                    <input type="text" id="card-number" required>
+                    
+                    <label for="expiry-date">Expiry Date:</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                    
+                    <label for="cvc">CVC:</label>
+                    <input type="text" id="cvc" required>
+                </div>
+                
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <p>Subtotal: $49.99</p>
+                    <p>Discount: -$0.00</p>
+                    <p>Total: $49.99</p>
+                    <button class="btn">Place Order</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <!-- Same footer as in index.html -->
+    </footer>
+</body>
+</html>
